@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 header,
 footer,
 .welcome-container {
@@ -65,7 +70,7 @@ a {
   font-size: 18px;
 }
 
-.welcome-container .join-btn {
+.join-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,19 +82,105 @@ a {
 }
 
 .recipe-container {
+  padding: 20px;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1f2937;
+  margin: 24px 0 40px 0;
 }
 
 .recipe-container ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.recipe-container a {
-  background-image: url(images/lasagna.jpeg);
-  object-fit: fill;
+.recipe-container ul li {
+  display: flex;
   width: 150px;
+  height: 250px;
+}
+
+.recipe-container ul li a {
+  display: inline-block;
+  width: 100%;
   height: 150px;
-  object-fit: fill;
   border-radius: 10px;
-  border: 2px solid #3882f6;
+  border: 3px solid #3882f6;
+}
+
+.recipe-container ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+}
+
+.recipe-container ul li a p {
+  font-size: 18px;
+  color: #1f2937;
+  margin-top: 6px;
+}
+
+.aside-container {
+  height: 300px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside-container-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aside-container .signature {
+  font-weight: 900;
+  font-size: 18px;
+  align-self: flex-end;
+}
+
+.aside-container .quote {
+  font-style: italic;
+  width: 600px;
+  font-size: 36px;
+}
+
+.callToAction-container {
+  align-self: center;
+  background-color: #3882f6;
+  border-radius: 8px;
+  height: 100px;
+  width: 750px;
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #e5e7eb;
+}
+.callToAction-container-text h3 {
+  color: #f9faf8;
+}
+
+.callToAction-container .join-btn {
+  border: 2px solid white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  height: 60px;
 }
